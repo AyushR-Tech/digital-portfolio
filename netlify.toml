@@ -1,0 +1,8 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[context.production.environment]
+  # Add environment variables in the Netlify UI if needed.
+  # VITE_GITHUB_USERNAME = "your-username"
+  # VITE_GITHUB_TOKEN = "your-token"

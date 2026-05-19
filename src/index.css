@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap");
+
+/* stylelint-disable at-rule-no-unknown */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* stylelint-enable at-rule-no-unknown */
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-slate-950 font-sans text-slate-100 antialiased;
+  }
+
+  body.light {
+    @apply bg-slate-50 text-slate-950;
+  }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(96, 165, 250, 0.6) rgba(15, 23, 42, 0.3);
+  }
+}
+
+@layer components {
+  .container-shell {
+    @apply mx-auto w-full max-w-7xl px-6 sm:px-8 lg:px-12;
+  }
+
+  .glass-panel {
+    @apply border border-white/10 bg-white/5 backdrop-blur-xl;
+  }
+
+  .light .glass-panel {
+    @apply border-slate-200/80 bg-white/70;
+  }
+
+  .section-spacing {
+    @apply py-20 sm:py-24 lg:py-28;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-white via-blue-100 to-blue-400 bg-clip-text text-transparent;
+  }
+
+  .light .text-gradient {
+    @apply from-slate-950 via-blue-900 to-blue-600;
+  }
+}
