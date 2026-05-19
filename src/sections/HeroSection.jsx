@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { FiArrowDownRight, FiMapPin } from "react-icons/fi";
+import profilePhoto from "../assets/profile.jpeg";
 
 const roles = [
   "AI/ML Engineer",
@@ -116,7 +117,7 @@ function HeroSection({ data }) {
             <div className="absolute bottom-10 right-0 h-32 w-32 rounded-full bg-blue-500/20 blur-3xl" />
 
             <img
-              src="/src/assets/profile.jpeg"
+              src={profilePhoto}
               alt="Profile Photo"
               className="relative h-80 w-80 rounded-[2rem] object-cover border-2 border-blue-400/20 shadow-2xl"
             />
