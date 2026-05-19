@@ -15,20 +15,6 @@ Premium animated portfolio website built with React, Vite, Tailwind CSS, Framer 
 
 ## Deployment
 
-### GitHub Pages
-
-This repo now includes a GitHub Actions workflow at `.github/workflows/deploy.yml` that builds the site and publishes the `dist` output to GitHub Pages.
-
-1. Create a GitHub repository for this project.
-2. Add the repository as a remote in this folder:
-   - `git remote add origin https://github.com/<your-username>/<your-repo>.git`
-3. Push the `main` branch:
-   - `git branch -M main`
-   - `git push -u origin main`
-4. The workflow will run automatically and deploy the site to GitHub Pages.
-
-> If you are using a repository site URL like `https://<your-username>.github.io/<your-repo>/`, set `base` in `vite.config.js` to `"/<your-repo>/"`.
-
 ### Vercel
 
 - Framework preset: `Vite`
