@@ -34,7 +34,14 @@ This repo now includes a GitHub Actions workflow at `.github/workflows/deploy.ym
 - Framework preset: `Vite`
 - Build command: `npm run build`
 - Output directory: `dist`
-- Add `VITE_GITHUB_USERNAME` and optional `VITE_GITHUB_TOKEN`
+- Project config file: `vercel.json`
+- Add `VITE_GITHUB_USERNAME` and optional `VITE_GITHUB_TOKEN` in Vercel Environment Variables
+
+To deploy on Vercel:
+1. Go to https://vercel.com/new
+2. Import `https://github.com/AyushR-Tech/digital-portfolio`
+3. Set Environment Variables if needed
+4. Deploy the project
 
 ### Netlify
 
