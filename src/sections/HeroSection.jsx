@@ -105,67 +105,21 @@ function HeroSection({ data }) {
             </div>
           </motion.div>
 
-          {/* RIGHT CONTENT */}
+          {/* RIGHT CONTENT - Profile Photo */}
           <motion.div
             initial={{ opacity: 0, scale: 0.96 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.2 }}
-            className="relative"
+            className="relative flex items-center justify-center"
           >
             <div className="absolute -left-12 top-8 h-28 w-28 rounded-full bg-cyan-400/20 blur-3xl" />
             <div className="absolute bottom-10 right-0 h-32 w-32 rounded-full bg-blue-500/20 blur-3xl" />
 
-            <div className="glass-panel relative overflow-hidden rounded-[2rem] border-white/10 p-7">
-              <div className="absolute inset-0 bg-hero-grid opacity-40" />
-
-              <div className="relative grid gap-5">
-                <div className="rounded-[1.75rem] border border-white/10 bg-slate-950/80 p-6 light:bg-white/80">
-                  <p className="text-sm uppercase tracking-[0.35em] text-blue-300">
-                    Focus
-                  </p>
-                  <h3 className="mt-3 font-display text-2xl font-bold text-white light:text-slate-950">
-                    End-to-End ML Systems
-                  </h3>
-                  <p className="mt-4 text-sm leading-7 text-slate-300 light:text-slate-700">
-                    Experience in building machine learning pipelines including data preprocessing,
-                    model training, evaluation, and deployment using Flask and AWS.
-                  </p>
-                </div>
-
-                <div className="grid gap-4 sm:grid-cols-3">
-                  {floatingCards.map((card, index) => {
-                    const Icon = card.icon;
-                    return (
-                      <motion.div
-                        key={`${card.label}-${index}`}
-                        animate={{ y: [0, -8, 0] }}
-                        transition={{
-                          duration: 4 + index,
-                          repeat: Infinity,
-                          ease: "easeInOut",
-                          delay: index * 0.3
-                        }}
-                        className="rounded-[1.5rem] border border-white/10 bg-white/5 p-5 backdrop-blur-xl light:bg-white/80"
-                      >
-                        <Icon className="text-blue-300" size={22} />
-                        <p className="mt-4 text-sm font-medium text-white light:text-slate-950">
-                          {card.label}
-                        </p>
-                      </motion.div>
-                    );
-                  })}
-                </div>
-
-                <div className="rounded-[1.75rem] border border-blue-400/20 bg-blue-500 p-6">
-                  <p className="text-sm uppercase tracking-[0.32em] text-blue-200">
-                    Current Focus
-                  </p>
-                  <p className="mt-3 text-xl font-semibold text-white">
-                    Deep Learning • Computer Vision • NLP • Deployment
-                  </p>
-                </div>
-              </div>
-            </div>
+            <img
+              src="/src/assets/profile.jpeg"
+              alt="Profile Photo"
+              className="relative h-80 w-80 rounded-[2rem] object-cover border-2 border-blue-400/20 shadow-2xl"
+            />
           </motion.div>
 
         </div>
